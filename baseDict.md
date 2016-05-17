@@ -1,6 +1,6 @@
 ## Basic Dict
 
-The following attributed should be included in the outside of the json
+The following attributed should be included in the parameter of the API
 
 name | type | Description
 --- | --- | ---
