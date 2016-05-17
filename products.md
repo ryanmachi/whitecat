@@ -10,111 +10,58 @@ Name | Type | Description
 ---  | ---  | ---
 productID | string |
 name | string |
-appVersion|string|
-phoneNumber|string|
-location|string|
-everPaid|string|
-email|string|
-facebookID|string|
-deviceModel|string|
+price|int|
+title|string|
+coverPic|string|
+pic|string|
+picNum|int|
+sanbox|int|
+description|string|
+specialPrice|string|
+coupon|int|
+type|int|
+shareurl|string|
+color|string|
+instock|int|
+relatedproduct|[]string|
+nextproduct|[]string|
 
 
 
-## Check Available
+## Get product info by id
 ```
-GET /users/available?...
+GET /products/<id>
 ```
 
 **URL Parameter**
 
-Name | Type | Description
----  | ---  | ---
-facebookID | string |
-accountName | string |
+none
 
 **Response**
 
-HTTP 200
+PRODUCT_INFO_DICT
 
-HTTP 404
-
-
-## Get the user object of myself
+## Get the productlist
 ```
-GET /users/me
+GET /products/
 ```
-Retrieve the user information of the given api key. It will contain more sensitive data.
+Retrieve the product list 
 
 **Parameter**
 
-None
-
-**Response**
-
-SELF_INFO_DICT
-
-
-## Login 
-```
-GET /users/login
-```
-Let the user login with facebook auth or password
-
-**Parameter**
 
 Name | Type | Description
 ---  | ---  | ---
-accountName | string | 
-password | string | 
-facebookID|string|
+productType | string | 
+priceMin | int | 
+priceMax |int|
+query|string|
+orderby|string|lowest price , expensive price,newest
 
-**Response**
-
-SELF_INFO_DICT
-
-
-## Update user
-```
-PATCH /users/me
-```
-
-**Multipart Parameter**
-
-Name | Type | Description
----  | ---  | ---
-accountName | string | 
-password | string | 
-location|string|(optional)
-phoneNumber|string|(optional)
-email|string|(optional)
-appVersion|string|
-deviceModel|string|
-
-**Response**
-
-HTTP 200
-
-HTTP 404
-
-
-## Register user
-```
-POST /users/?
-```
-
-**Multipart Parameter**
-
-Name | Type | Description
----  | ---  | ---
-accountName | string | 
-password | string | 
-location|string|(optional)
-phoneNumber|string|(optional)
-email|string|(optional)
 
 
 **Response**
 
-HTTP 200
+[]PRODUCT_INFO_DICT
 
-HTTP 404
+
