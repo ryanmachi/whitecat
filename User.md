@@ -56,6 +56,26 @@ None
 
 SELF_INFO_DICT
 
+
+## Login 
+```
+GET /users/login
+```
+Let the user login with facebook auth or password
+
+**Parameter**
+
+Name | Type | Description
+---  | ---  | ---
+accountName | string | 
+password | string | 
+facebookID|string|
+
+**Response**
+
+SELF_INFO_DICT
+
+
 ## Update user
 ```
 PATCH /users/me
