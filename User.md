@@ -5,10 +5,6 @@ Users
 
 ### USER_INFO_DICT
 
-`USER_INFO_DICT` equals to `Basic Fields + Relationship Fields`
-
-**Basic Fields**
-
 Name | Type | Description
 ---  | ---  | ---
 accountName | string |
